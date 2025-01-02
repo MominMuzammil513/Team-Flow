@@ -1,0 +1,36 @@
+version: "3.5"
+name: "team-flow-services"
+services:
+  db:
+    image: "postgres"
+    restart: always
+    container_name: team-flow-db
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_DB: "team"
+      POSTGRES_PASSWORD: "password"
+    volumes:
+      - database-data:/var/lib/postgresql/data/ # Corrected volume path
+    ports:
+      - "8010:5432" # Added quotes to avoid YAML parsing issues
+volumes:
+  database-data:
+
+
+# version: "3.5"
+# name: "super-productive-services"
+# services:
+#   db:
+#     image: "postgres"
+#     restart: always
+#     container_name: super-productive-db
+#     environment: # Corrected from 'enviroment'
+#       POSTGRES_USER: "postgres"
+#       POSTGRES_DB: "super-productive"
+#       POSTGRES_PASSWORD: "password"
+#     volumes:
+#       - database-data:/var/lib/postgresql/data/ # Corrected volume path
+#     ports:
+#       - "8010:5432" # Added quotes to avoid YAML parsing issues
+# volumes:
+#   database-data:

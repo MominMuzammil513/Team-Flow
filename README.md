@@ -5,13 +5,16 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
-npm run dev
+1. npm i && npm run dev
 # or
-yarn dev
+yarn i && yarn dev
 # or
-pnpm dev
+pnpm i && pnpm dev
 # or
 bun dev
+2. Open the Docker And Run "docker-compose up"
+3. Run "prisma generate"
+4. Run "prisma migrate dev"
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -34,3 +37,32 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+## introduction
+1. upload photos/assets =>  S3 + presigned urls
+2. solana => pay via solana , dispense via solana
+3. solana wallet adapter
+4. how to do via smart contract?
+5. Handling payouts
+6. Next.js + pretty UI
+7. 
+
+
+AUTH_SECRET="" # Added by `npx auth`. Read more: https://cli.authjs.dev
+SUPABASE_URL=
+SUPABASE_SERVICE_ROLE_KEY=
+NEXTAUTH_URL=''
+# This was inserted by `prisma init`:
+# Environment variables declared in this file are automatically made available to Prisma.
+# See the documentation for more detail: https://pris.ly/d/prisma-schema#accessing-environment-variables-from-the-schema
+
+# Prisma supports the native connection string format for PostgreSQL, MySQL, SQLite, SQL Server, MongoDB and CockroachDB.
+# See the documentation for all the connection string options: https://pris.ly/d/connection-strings
+
+DATABASE_URL="postgresql://databes:password@localhost:8010/DB-NAME?schema=public"
+GOOGLE_CLIENT_ID=''
+GOOGLE_CLIENT_SECRET=''
+GITHUB_CLIENT_ID=''
+GITHUB_CLIENT_SECRET=''
+UPLOADING_TOKEN=''
